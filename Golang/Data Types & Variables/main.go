@@ -85,6 +85,17 @@ func main (){
 	fmt.Printf("%q %T \n", age4, age4)
 
 
+	// Constants
+	// constants are the values that cannot be changed
+	// constants are declared using const keyword
+	// constants are declared outside the function
+	// constants are declared using camel case
+	//constants are immutable
+
+	const pi float64 = 3.14
+	fmt.Printf("%.2f \n", pi)
+
+
 
 
 
