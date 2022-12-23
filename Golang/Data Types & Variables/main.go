@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+	"strconv"
+)
 
 func main (){
 	var s string = "Hello world"
@@ -45,10 +49,42 @@ func main (){
 	fmt.Print("Hey there \n")
 
 	 // input from user
-	 var input string
-	 fmt.Println("Enter your name: ")
-	 fmt.Scanf("%s", &input)
-	 fmt.Println("Your name is: ", input)
+	//  var input string
+	//  fmt.Println("Enter your name: ")
+	//  fmt.Scanf("%s", &input)
+	//  fmt.Println("Your name is: ", input)
+
+ 
+    // use of reflect function
+
+	number1 := 56
+	fmt.Println(reflect.TypeOf(number1))
+
+	string := "omkar is the best"
+	fmt.Println(reflect.TypeOf(string))
+
+	// typpe conversion
+
+	var number2 int = 59
+	number3 := float64(number2)
+	fmt.Printf("%.2f \n", number3)
+
+	m := 90.78
+	n := int(m)
+	fmt.Printf("%d \n", n)
+
+	// strconv package
+    Name := "200"
+	strname, err := strconv.Atoi(Name)
+	fmt.Printf("%q %T \n", strname, strname)
+	fmt.Printf("%q \n", strname, err)
+
+	//int to string
+	age3 :=21
+	age4 := strconv.Itoa(age3)
+	fmt.Printf("%q %T \n", age4, age4)
+
+
 
 
 
