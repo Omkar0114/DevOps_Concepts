@@ -63,7 +63,7 @@ func main (){
 	string := "omkar is the best"
 	fmt.Println(reflect.TypeOf(string))
 
-	// typpe conversion
+	// type conversion
 
 	var number2 int = 59
 	number3 := float64(number2)
