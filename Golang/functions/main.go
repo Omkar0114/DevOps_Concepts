@@ -17,10 +17,19 @@ func main() {
 	// }
 
 	// function call
-	fmt.Println(addTwo(2, 5))
+	//fmt.Println(addTwo(2, 5))
 
 	// function with return type
-	fmt.Println(greet("Omkar"))
+	//fmt.Println(greet("Omkar"))
+
+	// function with multiple return values
+	fmt.Println(sum(10, 12, 14, 15))
+	fmt.Println(sum())
+	fmt.Println(sum(10))
+
+
+	sum, product := sumAndProduct(10, 20)
+	fmt.Println(sum, product)
 
 }
 
@@ -30,4 +39,20 @@ func addTwo(a int, b int) int{
 
 func greet(name string)string{
 	return "Hello " + name
+}
+
+// we can also declare function with return type
+// we can return multiple return values
+
+func sum (nums ...int)int {
+	ans := 0
+	for _, num := range nums{
+		ans += num
+	}
+	return ans
+}
+
+// function with multiple return values
+func sumAndProduct(a int, b int)(int, int){
+	return a + b, a * b
 }
